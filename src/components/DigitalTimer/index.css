@@ -1,0 +1,86 @@
+.back {
+  background-image: linear-gradient(to right, #ffffff, #cffcf1);
+  background-size: cover;
+  font-weight: bold;
+}
+
+.con {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/digital-timer-elapsed-bg.png');
+  height: 800px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.con1 {
+  background-color: white;
+  border-radius: 120px;
+  height: 200px;
+  font-weight: bold;
+  font-size: 30px;
+  width: 200px;
+  margin-bottom: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.con5 {
+  display: flex;
+  flex-direction: row;
+}
+
+.but {
+  background-color: transparent;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.img1 {
+  height: 60px;
+  width: 60px;
+}
+
+.but1 {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.con3 {
+  display: flex;
+  flex-direction: row;
+}
+
+.con4 {
+  display: flex;
+  flex-direction: row;
+}
+
+.con6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.div1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.div7 {
+  background-image: linear-gradient(to right, #cffcf1, #00d9f5);
+  border-radius: 10px;
+  height: 50px;
+  width: 60px;
+  text-align: center;
+}
