@@ -3,7 +3,7 @@ import {Component} from 'react'
 import './index.css'
 
 class DigitalTimer extends Component {
-  state = {min: 25, sec: 60, But1: false}
+  state = {min: 25, sec: 60, But1: false, count1: 25}
 
   componentWillUnmount() {
     this.clearTimerInterval()
@@ -31,12 +31,16 @@ class DigitalTimer extends Component {
     }
     if (sec === 0) {
       this.setState({sec: 60})
+      this.setState(prevState => ({min: prevState.min - 1}))
     }
     this.setState(prevState => ({sec: prevState.sec - 1}))
   }
 
   onBut1 = () => {
-    this.setState({min: 25})
+    const {count1} = this.state
+    this.clearTimerInterval()
+    this.setState(prevState => ({But1: !prevState.But1}))
+    this.setState({min: count1})
     this.setState({sec: 0})
   }
 
@@ -44,6 +48,7 @@ class DigitalTimer extends Component {
     const {min, But1} = this.state
     if (But1 === false && min > 1) {
       this.setState(prevState => ({min: prevState.min - 1}))
+      this.setState(prevState => ({count1: prevState.count1 - 1}))
     }
   }
 
@@ -51,11 +56,12 @@ class DigitalTimer extends Component {
     const {But1} = this.state
     if (But1 === false) {
       this.setState(prevState => ({min: prevState.min + 1}))
+      this.setState(prevState => ({count1: prevState.count1 + 1}))
     }
   }
 
   render() {
-    const {min, sec, But1} = this.state
+    const {min, sec, But1, count1} = this.state
     const str2 = min < 10 ? `0${min}` : `${min}`
     let str3 = sec < 10 ? `0${sec}` : `${sec}`
     if (sec === 60) {
@@ -106,7 +112,7 @@ class DigitalTimer extends Component {
                   -
                 </button>
                 <div className="div7">
-                  <h1>{min}</h1>
+                  <p>{count1}</p>
                 </div>
                 <button type="button" className="but" onClick={this.onBut3}>
                   +

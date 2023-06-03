@@ -2,6 +2,10 @@
   background-image: linear-gradient(to right, #ffffff, #cffcf1);
   background-size: cover;
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .con {
